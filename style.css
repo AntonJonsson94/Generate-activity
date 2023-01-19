@@ -1,0 +1,20 @@
+body {
+    background-color: black;
+}
+#container {
+    background-color: azure;
+}
+#loader {
+    display: flex;
+    flex-direction: column;
+    padding-left: 80vh;
+    padding-top: 40vh;
+}
+#form {
+    background-color: aquamarine;
+    padding-top: 50vh;
+    text-align: center;
+}
+.display-activity {
+    font-size: 80px;
+}
