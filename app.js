@@ -13,8 +13,9 @@ const body = document.querySelector("body");
 const recreationOption = document.querySelector("option");
 const socialOption = document.querySelector("option");
 const busyworkOption = document.querySelector("option");
-const displayActivity = document.querySelector("p");
+const displayActivity = document.querySelector(".display-activity");
 const submitButton = document.querySelector("button");
+const selectOption = document.querySelector("select");
 function loadingScreen() {
     setTimeout(() => {
         loadingImg.style.display = "none";
@@ -26,19 +27,31 @@ function bodyDiv() {
     body.appendChild(container);
 }
 const url = "https://www.boredapi.com/api/activity/";
-const urlType = "https://www.boredapi.com/api/activity?type=";
-function getData() {
+const urlType = "http://www.boredapi.com/api/activity?type=";
+function getType() {
     return __awaiter(this, void 0, void 0, function* () {
-        const response = yield fetch(url);
+        const selectedAcitivity = selectOption.value;
+        const response = yield fetch(urlType + selectedAcitivity);
         const data = yield response.json();
-        displayActivity.innerHTML = data.activity;
         console.log(data.activity);
         console.log(data.type);
+        displayActivity.innerHTML = data.activity;
     });
 }
-function chooseActivity() {
-    return __awaiter(this, void 0, void 0, function* () { });
+function selectedAcitivity() {
+    submitButton.addEventListener("click", () => {
+        function getType() {
+            return __awaiter(this, void 0, void 0, function* () {
+                const selection = selectOption.value;
+                const response = yield fetch(urlType + selection);
+                const data = yield response.json();
+                const generateActivity = data;
+                console.log(generateActivity);
+                displayActivity.innerHTML = generateActivity;
+            });
+        }
+        getType();
+    });
 }
-getData();
 loadingScreen();
-bodyDiv();
+// bodyDiv()

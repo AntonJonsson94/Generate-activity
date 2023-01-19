@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -6,23 +7,28 @@
         <title>Document</title>
         <link rel="stylesheet" href="style.css" />
     </head>
-    <!-- <img src="loading.gif" id="loader" style /> -->
+    <p class="title">Random Activity Generator</p>
     <body id="body">
         <div id="form">
             <p class="display-activity"></p>
 
-            <select name="Choose your type" id="selection">
-                <label for="Choose activity type">Choose your activity</label>
+            <h3>Choose your activity!</h3>
+            <select
+                name="Choose your type"
+                id="selection"
+                onchange="getType();"
+            >
                 <optgroup label="Choose activity type">
                     <option value="recreational" id="recreation">
                         Recreational
                     </option>
                     <option value="social" id="social">Social</option>
                     <option value="busywork" id="busywork">Busywork</option>
+                    <option value="education">Education</option>
+                    <option value="relaxation">Relaxation</option>
                     <label for="submit"></label>
                 </optgroup>
             </select>
-            <button id="submit">Submit</button>
         </div>
     </body>
     <script src="app.js"></script>

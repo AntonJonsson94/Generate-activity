@@ -1,6 +1,11 @@
 body {
     background-color: black;
 }
+.title {
+    color: white;
+    font-size: xx-large;
+    text-align: center;
+}
 #container {
     background-color: azure;
 }
@@ -12,9 +17,11 @@ body {
 }
 #form {
     background-color: aquamarine;
-    padding-top: 50vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
     text-align: center;
 }
 .display-activity {
     font-size: 80px;
+    color: black;
 }
