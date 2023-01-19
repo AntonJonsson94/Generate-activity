@@ -1,1 +1,1 @@
-# loading-screen-excersise
+# Generate random activity from Bored-Api.
